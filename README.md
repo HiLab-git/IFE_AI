@@ -7,7 +7,7 @@ This repository provide source code for IFE image recognition in the following p
 # Image and preprocess
 The images in this study are from two different systems that have different image styles (see `data/data_a` and `data/data_b`, respectively). We preprocess the images to make them have the same arrangement and size. The following figures shows images before and after preprocessing.
 
-![image](./data/data_a/20200824_1012358442.png) ![image_process](./data/data_a_prcess/20200824_1012358442.png)
+![image](./data/data_a/20200824_1012358442.jpg) ![image_process](./data/data_a_prcess/20200824_1012358442.jpg)
 
 To play with a demo for image preprocessing, run the following command:
 
