@@ -3,11 +3,20 @@ This repository provide source code for IFE image recognition in the following p
 
 * H. Hu et al. "Expert-level Immunofixation Electrophoresis (IFE) Image Recognition based on Explainable and Generalizable Deep Learning". Submited to Clinical Chemistry.
 
+# Requirements
+* [Pytorch][torch_link] version >=1.9.0
+* [PyMIC][pymic_link], a Pytorch-based toolkit for medical image computing. Version 0.2.5 is required. Install it by `pip install PYMIC==0.2.5`.
+* Som basic python packages such as Numpy, Pandas, scipy.
+* See `requirements.txt` for more details
+
+[torch_link]:https://pytorch.org
+[pymic_link]:https://github.com/HiLab-git/PyMIC
 
 # Image and preprocess
 The images in this study are from two different systems that have different image styles (see `data/data_a` and `data/data_b`, respectively). We preprocess the images to make them have the same arrangement and size. The following figures shows images before and after preprocessing.
 
-![image](./data/data_a/20200824_1012358442.jpg) ![image_process](./data/data_a_process/20200824_1012358442.jpg)
+![image_a](./data/example_a.png) 
+![image_b](./data/example_b.png)
 
 To play with a demo for image preprocessing, run the following command:
 

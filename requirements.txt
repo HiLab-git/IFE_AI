@@ -1,0 +1,13 @@
+matplotlib>=3.1.2
+numpy>=1.17.4
+pandas>=1.1.5
+Pillow>=8.2.0
+PYMIC==0.2.5
+python>=3.6.9 
+pytorch>=1.9.0  
+scikit-image>=0.16.2
+scikit-learn>=0.24.1
+scipy>=1.2.1
+tensorboard>=2.1.0
+tensorboardX>=1.9
+torchvision>=0.10.0
