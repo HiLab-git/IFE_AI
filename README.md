@@ -14,3 +14,16 @@ To play with a demo for image preprocessing, run the following command:
 ```
 python preprocess.py
 ```
+
+# Demo for inference
+To use the pretrained model for inference, download the checkpoints from Google Drive and save them to ``ckpts``. Run the following script:
+
+```
+python demo_inference.py
+```
+
+By defualt, it uses the image `data/data_a/20200824_1012358442.jpg` from group `a` as an example. You can set different image names, such as an image from group `b` by editing line 72:
+
+```
+img_name, group  ="data/data_b/9971568DTouch64.jpg", "b" 
+```
