@@ -9,11 +9,8 @@ This repository provide source code for IFE image recognition in the following p
 * Som basic python packages such as Numpy, Pandas, scipy.
 * See `requirements.txt` for more details
 
-[torch_link]:https://pytorch.org
-[pymic_link]:https://github.com/HiLab-git/PyMIC
-
 # Image and preprocess
-The images in this study are from two different systems that have different image styles (see `data/data_a` and `data/data_b`, respectively). We preprocess the images to make them have the same arrangement and size. The following figures shows images before and after preprocessing.
+The images in this study are from two different systems that have different image styles (see `data/data_a` and `data/data_b`, respectively). We preprocess the images to make them have the same arrangement and size. The following figures show images before and after preprocessing.
 
 ![image_a](./data/example_a.png) 
 ![image_b](./data/example_b.png)
@@ -25,7 +22,8 @@ python preprocess.py
 ```
 
 # Demo for inference
-To use the pretrained model for inference, download the checkpoints from Google Drive and save them to ``ckpts``. Run the following script:
+To use the pretrained model for inference, download the checkpoints from [Google Drive][model_link] and save them to `ckpts`. Note that in the oringal paper, each of the three networks (VGG16, ResNet18 and MobileNetv2) has five checkpoints based on 5-fold cross validation. Due to the Google Drive space limit, we only upload one checkpoint for each network for model ensemble. 
+Run the following script for inference:
 
 ```
 python demo_inference.py
@@ -36,3 +34,7 @@ By defualt, it uses the image `data/data_a/20200824_1012358442.jpg` from group `
 ```
 img_name, group  ="data/data_b/9971568DTouch64.jpg", "b" 
 ```
+
+[torch_link]:https://pytorch.org
+[pymic_link]:https://github.com/HiLab-git/PyMIC
+[model_link]:https://drive.google.com/drive/folders/1w6e5omz_CdiOyGSViUOtWedM9kXGVr7J?usp=sharing
