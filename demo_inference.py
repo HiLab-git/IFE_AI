@@ -53,21 +53,18 @@ class InferenceAgent():
         with torch.no_grad():
             for i in range(3):
                 net_name = self.net_names[i]
-                for f in range(5):
-                    ckpt_name = "ckpts/{0:}/{1:}_f{2:}.pt".format(self.stage,
-                        net_name, f+1)
-                    ckpt = torch.load(ckpt_name, map_location = self.device)
-                    self.networks[i].load_state_dict(ckpt['model_state_dict'])
-                    self.networks[i].eval()
-                    pred = self.networks[i](net_input)
-                    
-                    if(self.stage == "coarse"):
-                        prob = nn.Softmax(dim = 1)(pred).detach().cpu().numpy()[0]
-                        p_list.append(prob[1:])
-                    else:
-                        prob = nn.Sigmoid()(pred).detach().cpu().numpy()[0] 
-                        p_list.append(prob)
-                    # print(net_name, f+1, ["{0:.4f}".format(x) for x in prob])
+                ckpt_name = "ckpts/{0:}/{1:}.pt".format(self.stage, net_name)
+                ckpt = torch.load(ckpt_name, map_location = self.device)
+                self.networks[i].load_state_dict(ckpt['model_state_dict'])
+                self.networks[i].eval()
+                pred = self.networks[i](net_input)
+                
+                if(self.stage == "coarse"):
+                    prob = nn.Softmax(dim = 1)(pred).detach().cpu().numpy()[0]
+                    p_list.append(prob[1:])
+                else:
+                    prob = nn.Sigmoid()(pred).detach().cpu().numpy()[0] 
+                    p_list.append(prob)
         p_avg = np.asarray(p_list).mean(axis = 0)
         return p_avg
         
