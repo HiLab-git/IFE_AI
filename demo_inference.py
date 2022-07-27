@@ -42,9 +42,8 @@ class InferenceAgent():
         # transpose rgb image from [H, W, C] to [C, H, W]
         img_array = np.transpose(img_array, axes = [2, 0, 1])
         img_dict  = {"image": img_array}
-        if(self.stage == "coarse"):
-            for trans in self.transform_list:
-                img_dict = trans(img_dict)
+        for trans in self.transform_list:
+            img_dict = trans(img_dict)
         
         net_input = np.expand_dims(img_dict["image"], axis = 0)
         net_input = torch.from_numpy(net_input).float()
