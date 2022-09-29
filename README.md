@@ -1,7 +1,7 @@
 # Immunofixation Electrophoresis (IFE) Image Recognition based on Deep Learning
-This repository provide source code for IFE image recognition in the following paper:
+This repository provides source code for IFE image recognition in the following paper:
 
-* H. Hu et al. "Expert-level Immunofixation Electrophoresis (IFE) Image Recognition based on Explainable and Generalizable Deep Learning". Submited to Clinical Chemistry.
+* Honghua Hu, Wei Xu et al. "Expert-level Immunofixation Electrophoresis (IFE) Image Recognition based on Explainable and Generalizable Deep Learning". Submitted to Clinical Chemistry, 2022.
 
 # Requirements
 * [Pytorch][torch_link] version >=1.9.0
