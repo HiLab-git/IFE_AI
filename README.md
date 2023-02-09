@@ -1,8 +1,21 @@
 # Immunofixation Electrophoresis (IFE) Image Recognition based on Deep Learning
 This repository provides source code for IFE image recognition in the following paper:
 
-* Honghua Hu, Wei Xu et al. "Expert-level Immunofixation Electrophoresis (IFE) Image Recognition based on Explainable and Generalizable Deep Learning". Submitted to Clinical Chemistry, 2022.
+* Honghua Hu, Wei Xu et al. "Expert-level Immunofixation Electrophoresis (IFE) Image Recognition based on Explainable and Generalizable Deep Learning". Clinical Chemistry, 69, no. 2 (2023): 130-139.
 
+BibTeX entry:
+
+    @article{Hu2023IFE,
+    author = {Honghua Hu and Wei Xu and Ting Jiang and Yuheng Cheng and Xiaoyan Tao and Wenna Liu and Meiling Jian and Kang Li and Guotai Wang},
+    title = {Expert-Level Immunofixation Electrophoresis Image Recognition based on Explainable and Generalizable Deep Learning},
+    year = {2023},
+    url = {https://doi.org/10.1093/clinchem/hvac190},
+    journal = {Clinical Chemistry},
+    volume = {69},
+    issue = {2},
+    pages = {130-139},
+    }
+    
 # Requirements
 * [Pytorch][torch_link] version >=1.9.0
 * [PyMIC][pymic_link], a Pytorch-based toolkit for medical image computing. Version 0.2.5 is required. Install it by `pip install PYMIC==0.2.5`.
